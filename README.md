@@ -1,96 +1,116 @@
-Simple Shell
+# Simple Shell Project
 
-Introduction
+**Authors:** Jesse Adjar and Diana Ntow
 
-Welcome to the Simple Shell project! This is a basic implementation of a Unix-like shell written in C. A shell is a command-line interface that allows users to interact with an operating system by executing commands. In this README, we will provide you with information on how to use and understand this simple shell.
+## Introduction
 
-Features
+Welcome to the Simple Shell Project! This project is a basic implementation of a Unix-like shell in C, created by Jesse Adjar and Diana Ntow. A shell is a command-line interface that allows users to interact with the operating system by entering commands.
 
-Our Simple Shell supports the following basic features:
+In this README file, we will provide you with information on how to compile and use our simple shell, along with some basic commands and features.
 
-Running Commands: You can execute simple commands such as ls, pwd, echo, and more, just like in a standard Unix shell.
-Command-Line Arguments: The shell handles basic command-line arguments as expected.
-Piping Commands: You can chain commands together using the | operator. For example, you can pipe the output of one command as input to another.
-Input and Output Redirection: The shell supports input and output redirection using the < and > operators, allowing you to read input from a file and write output to a file.
-Background Execution: You can run a command in the background by appending & to the command. This returns control to the shell immediately.
-Built-in Commands: The shell provides a few built-in commands, such as cd for changing the current directory and exit for exiting the shell.
-Getting Started
+## Getting Started
 
-To use the Simple Shell, follow these steps:
+To use the Simple Shell Project, follow these steps:
 
-Clone the Repository: Clone this repository to your local machine using the following command:
-bash
-Copy code
-git clone https://github.com/your-username/simple-shell.git
-Navigate to the Project Directory: Move into the project directory:
-bash
-Copy code
-cd simple-shell
-Compile the Shell: Compile the shell using a C compiler like gcc:
-bash
-Copy code
-gcc -o shell shell.c
-Run the Shell: Execute the shell:
-bash
-Copy code
-./shell
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/jesseadjar/simple-shell.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd simple-shell
+   ```
+
+3. Compile the shell:
+
+   ```bash
+   gcc -o shell shell.c
+   ```
+
+4. Run the shell:
+
+   ```bash
+   ./shell
+   ```
+
 You should now be in the Simple Shell environment, ready to enter commands.
 
-Usage
+## Features
 
-Running Commands
-To run a command, simply type it and press Enter. For example:
+Our Simple Shell Project supports the following basic features:
 
-bash
-Copy code
+- Running simple commands like `ls`, `pwd`, `echo`, and more.
+- Handling basic command-line arguments.
+- Piping commands together using the `|` operator.
+- Redirecting input and output with `<` and `>` operators.
+- Background execution of commands with `&`.
+- Handling built-in commands such as `cd`.
+
+## Usage
+
+### Running Commands
+
+To run a command, simply enter it and press Enter. For example:
+
+```bash
 ls -l
-Piping Commands
-You can pipe commands together using the | operator. For example:
+```
 
-bash
-Copy code
+### Piping Commands
+
+You can pipe commands together using the `|` operator. For example:
+
+```bash
 ls -l | grep myfile
-Input and Output Redirection
-Redirect input and output using the < and > operators. For example:
+```
 
-bash
-Copy code
+### Redirecting Input and Output
+
+You can redirect input and output using the `<` and `>` operators. For example:
+
+```bash
 cat < input.txt > output.txt
-Background Execution
-To run a command in the background, use the & symbol. For example:
+```
 
-bash
-Copy code
+### Background Execution
+
+To run a command in the background, use the `&` symbol. For example:
+
+```bash
 sleep 10 &
-Built-in Commands
-The shell supports built-in commands:
+```
 
-cd: Change the current directory.
-exit: Exit the shell.
-Troubleshooting
+### Built-in Commands
 
-If you encounter any issues while using the Simple Shell, consider the following:
+The shell also supports some built-in commands, including:
 
-Ensure successful compilation with gcc.
-Check for syntax errors in your commands.
-Use the correct operators for piping and redirection.
-Contributions
+- `cd`: Change the current directory.
+- `exit`: Exit the shell.
 
-We welcome contributions to the Simple Shell project! If you'd like to contribute, please follow these steps:
+## Troubleshooting
 
-Fork the repository to your GitHub account.
-Make your desired changes or enhancements.
-Submit a pull request detailing your changes.
-We appreciate your help in improving this project!
+If you encounter any issues while using the Simple Shell Project, please check the following:
 
-License
+- Ensure that you have compiled the shell successfully.
+- Check for any syntax errors in your commands.
+- Make sure you are using the correct operators for piping and redirection.
 
-This project is licensed under the MIT License. Refer to the LICENSE file for more details.
+## Contributions
 
-Contact
+We welcome contributions to the Simple Shell Project! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
 
-If you have questions, feedback, or suggestions, feel free to reach out:
+## License
 
-Your Name
-Email: your.email@example.com
-Thank you for using our Simple Shell! We hope you find it useful and informative.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+If you have any questions or feedback, feel free to contact the authors:
+
+- Jesse Adjar: royaljejil2@yahoo.com
+- Diana Ntow: dianasenakey@gmail.com
+
+Thank you for using our Simple Shell! We hope you find it useful and enjoy using it.
