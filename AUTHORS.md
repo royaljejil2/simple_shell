@@ -1,4 +1,5 @@
 # This file lists all contributors to the repository.
 
-*JESSE NII AYERTEY ADJAR <royaljejil2@yahoo.com>
-*DIANA NTOW <dianasenakey@gmail.com>
+1. JESSE NII AYERTEY ADJAR <royaljejil2@yahoo.com>
+
+2. DIANA NTOW <dianasenakey@gmail.com>
