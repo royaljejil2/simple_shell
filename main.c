@@ -17,7 +17,7 @@ int i;
 
 
 int main(void) {
-    
+
     while (1) {
         printf(PROMPT);
         if (fgets(input, sizeof(input), stdin) == NULL) {
@@ -71,5 +71,5 @@ int main(void) {
             waitpid(pid, &status, 0);
         }
     }
-    return 0;
+    return (0);
 }
