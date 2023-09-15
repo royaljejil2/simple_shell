@@ -6,11 +6,9 @@
 #include <sys/wait.h>
 
 #define MAX_BUFFER_SIZE 1024
-// #define PROMPT "myshell> "
 #define PROMPT "($) "
 
 char input[MAX_BUFFER_SIZE];
-// int arg_count = 0;
 char *args[MAX_BUFFER_SIZE];
 int arg_count = 0;
 char *token;
@@ -23,7 +21,7 @@ int main(void) {
     while (1) {
         printf(PROMPT);
         if (fgets(input, sizeof(input), stdin) == NULL) {
-            break; // Exit the shell on Ctrl+D (EOF)
+            break;
         }
 
         i = 0;
@@ -38,7 +36,6 @@ int main(void) {
             continue;
         }
 
-        // char *args[MAX_BUFFER_SIZE];
         arg_count = 0;
         token = strtok(input, " \n");
         while (token != NULL) {
@@ -52,35 +49,25 @@ int main(void) {
                 fprintf(stderr, "cd: missing argument\n");
             } else {
                 if (chdir(args[1]) != 0) {
-                    // printf("before chdir");
                     perror("chdir");
                 }
             }
             continue;
         } else if (strcmp(args[0], "exit") == 0) {
-            // printf("before exit");
             exit(EXIT_SUCCESS);
         }
 
         pid = fork();
         if (pid == -1) {
-            // printf("before fork");
             perror("fork");
         } else if (pid == 0) {
-            // if (execvp(args[0], args) == -1) {
-            //     // printf("before exec");
-            //     perror("execvp");
-            //     exit(EXIT_FAILURE);
-            //     // printf("enter a new value");
-            // }
-            char *envp[] = {NULL}; // Set the environment variables if needed
+            char *envp[] = {NULL};
             if (execve(args[0], args, envp) == -1) {
                 perror("execve");
                 exit(EXIT_FAILURE);
             }
         } else {
             int status;
-            // printf("before pid");
             waitpid(pid, &status, 0);
         }
     }
