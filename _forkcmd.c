@@ -16,13 +16,15 @@ int _forkcmd(char **arg, char **av, char **env, char *lineptr, int np, int c)
 	pid_t childPid;
 
 	char *formatChar = "%s: %d: %s: not found\n";
+
 	childPid = fork();
 
 	if (childPid != 0)
 	{
 		wait(&status);
 
-		if (WEXITSTATUS(status) != 0 && WIFEXITED(status)) {
+		if (WEXITSTATUS(status) != 0 && WIFEXITED(status))
+		{
 			return (WEXITSTATUS(status));
 		}
 	}
@@ -31,10 +33,11 @@ int _forkcmd(char **arg, char **av, char **env, char *lineptr, int np, int c)
 		if (execve(arg[0], arg, env) == -1)
 		{
 			fprintf(stderr, formatChar, av[0], np, arg[0]);
-			if (!c) {
+			if (!c)
+			{
 				free(arg[0]);
 			}
-			
+
 			free(lineptr);
 			free(arg);
 			exit(errno);
