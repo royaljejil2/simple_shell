@@ -9,7 +9,8 @@ char *_getlinecmd(void)
 	size_t charterusr = 0;
 	char *lineptr = NULL;
 
-	if (isatty(STDIN_FILENO)) {
+	if (isatty(STDIN_FILENO))
+	{
 		write(STDOUT_FILENO, "$ ", 2);
 	}
 

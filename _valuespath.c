@@ -13,19 +13,16 @@ int _valuespath(char **arg, char **env)
 	struct stat statlineptr;
 	size_t valuepath;
 	size_t cmd;
-	if (stat(*arg, &statlineptr) == 0) {
-		return (-1);
-	}
 
+	if (stat(*arg, &statlineptr) == 0)
+		return (-1);
 	relativepath = _getpath(env);
-
-	if (relativepath == NULL) {
+	if (relativepath == NULL)
+	{
 		return (-1);
 	}
-
 	tkn = _strtok(relativepath, ":");
 	cmd = _strlen(*arg);
-
 	while (tkn)
 	{
 		valuepath = _strlen(tkn);
@@ -36,11 +33,9 @@ int _valuespath(char **arg, char **env)
 			free(relativepath);
 			return (-1);
 		}
-
 		absolutepath = _strcpy(absolutepath, tkn);
 		_strcat(absolutepath, "/");
 		_strcat(absolutepath, *arg);
-
 		if (stat(absolutepath, &statlineptr) == 0)
 		{
 			*arg = absolutepath;
@@ -51,6 +46,5 @@ int _valuespath(char **arg, char **env)
 		tkn = _strtok(NULL, ":");
 	}
 	free(relativepath);
-
 	return (-1);
 }

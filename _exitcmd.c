@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
- * _exitcmd - function closes the simple_shell 
- * @arg: pointer to args.
+ * _exitcmd - function closes the simple_shell
+ * @args: pointer to args.
  * @lineptr: standard input str
  * @x: exitn value
  */
@@ -19,6 +19,6 @@ void _exitcmd(char **args, char *lineptr, int x)
 	es = atoi(args[1]);
 
 	free(args);
-    free(lineptr);
+	free(lineptr);
 	exit(es);
 }

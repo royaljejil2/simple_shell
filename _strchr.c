@@ -3,7 +3,7 @@
 /**
  * _strchr - locates the ﬁrst occurrence of char in the string
  * @s: string to search
- * @c: character to look for 
+ * @c: character to look for
  * Return: pointer to char
  **/
 char *_strchr(const char *s, int c)

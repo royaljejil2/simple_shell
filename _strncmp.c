@@ -2,7 +2,7 @@
 
 /**
  *_strncmp -  compare first 'n' characters of two strings
- *@s1: first string 
+ *@s1: first string
  *@s2: second string
  *@n: max number of characters to compare
  * Return: positive if s1 < s2
@@ -22,6 +22,6 @@ size_t _strncmp(char *s1, char *s2, size_t n)
 			return (i);
 		}
 	}
-	
+
 	return (0);
 }
