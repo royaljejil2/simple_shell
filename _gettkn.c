@@ -17,17 +17,20 @@ char **_gettkn(char *lineptr)
 
 	for (index = 0; lineptr[index]; index++)
 	{
-		if (lineptr[index] == ' ') {
+		if (lineptr[index] == ' ')
+		{
 			length++;
 		}
 	}
 
-	if ((length + 1) == _strlen(lineptr)) {
+	if ((length + 1) == _strlen(lineptr))
+	{
 		return (NULL);
 	}
 
 	usercmd = malloc(sizeof(char *) * (length + 2));
-	if (!usercmd) {
+	if (!usercmd)
+	{
 		return (NULL);
 	}
 
