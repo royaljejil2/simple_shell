@@ -35,7 +35,6 @@ int _forkcmd(char **arg, char **av, char **env, char *lineptr, int np, int c)
 			fprintf(stderr, formatChar, av[0], np, arg[0]);
 			if (!c)
 				free(arg[0]);
-
 			free(lineptr);
 			free(arg);
 			exit(errno);
